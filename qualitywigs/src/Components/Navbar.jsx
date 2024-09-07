@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoCart } from "react-icons/io5";
 import { FaUserAlt } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
 import { FaSearch } from "react-icons/fa";
+import { ShopContext } from "../Context/Context";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const {setShowSearch} = useContext(ShopContext)
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <Link to={"/"}><img src="" alt="logo" className="w-36" /> </Link>
@@ -33,7 +35,7 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <span className="w-5 cursor-pointer"><FaSearch /></span>
+        <span onClick={()=>setShowSearch(true)} className="w-5 cursor-pointer"><FaSearch /></span>
         <div className="group relative">
           <span className="w-5 cursor-pointer"><FaUserAlt /></span>
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">

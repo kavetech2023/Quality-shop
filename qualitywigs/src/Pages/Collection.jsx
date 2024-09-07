@@ -6,11 +6,12 @@ import ProductItem from '../Components/ProductItem'
 
 const Collection = () => {
 
-  const {products} = useContext(ShopContext)
+  const {products, search, showSearch} = useContext(ShopContext)
   const [filter, setFilter] = useState(false)
   const [filteredProducts, setFilteredProducts] = useState([])
   const [category, setCategory] = useState([])
   const [size, setSize] = useState([])
+  const [sortType, setSortType] = useState("relevant")
 
 
   const toggleFilter = (e) => {
@@ -29,13 +30,48 @@ const Collection = () => {
     }
   }
 
-  useEffect(() => {
-      setFilteredProducts(products)
-  },[])
+  const applyFilter = () =>{
+    let temp = products.slice();
+    if (showSearch && search)
+    {
+      temp = temp.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+    }
+    if (category.length > 0){
+      temp = temp.filter(item => category.includes(item.category))
+    }
 
-  useEffect(()=>{
-      console.log(category)
-  },[category])
+    if (size.length > 0){
+      temp = temp.filter(item => size.includes(item.size))
+    }
+    setFilteredProducts(temp)
+  }
+
+  const sortProducts = (e) =>{
+    let pcopy = filteredProducts.slice();
+    switch(sortType){
+      case "low-high":
+        pcopy.sort((a,b) => a.price - b.price)
+        setFilteredProducts(pcopy)
+        break;
+      case "high-low":
+        pcopy.sort((a,b) => b.price - a.price)
+        setFilteredProducts(pcopy)
+        break;
+      default:
+        applyFilter();
+        break;
+    }
+  }
+
+
+  useEffect(() => {
+    applyFilter();
+  },[category,size,search,showSearch])
+
+  useEffect(() => {
+    sortProducts();
+  },[sortType])
+ 
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
@@ -54,10 +90,10 @@ const Collection = () => {
               <input className='w-3' type="checkbox" value={"Men"} onChange={toggleFilter}/> Men
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type="checkbox" value={"WoMen"} onChange={toggleFilter} /> Men
+              <input className='w-3' type="checkbox" value={"Women"} onChange={toggleFilter} /> Women
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type="checkbox" value={"Kids"} onChange={toggleFilter}/> Men
+              <input className='w-3' type="checkbox" value={"Kids"} onChange={toggleFilter}/> Kids
             </p>
           </div>
         </div>
@@ -84,7 +120,7 @@ const Collection = () => {
           <div className='flex justify-between text-base sm:text-2xl mb-4'>
             <Title text1={"ALL"} text2={"COLLECTIONS"} />
             {/*Sort by*/}
-            <select className='border-2 border-gray-300 px-2 py-1 rounded-sm text-sm'>
+            <select onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 px-2 py-1 rounded-sm text-sm'>
               <option value="relevant">Sort by: Relevant</option>
               <option value="low-high">Sort by: Low-High</option>
               <option value="high-low">Sort by: High-Low</option>
