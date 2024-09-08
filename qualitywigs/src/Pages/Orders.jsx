@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Title from '../Components/title'
+import Title from '../Components/Title'
 import { products } from '../assets/assets'
 import { ShopContext } from '../Context/Context'
 

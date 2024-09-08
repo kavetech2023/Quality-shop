@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../Components/title'
+import Title from '../Components/Title'
 import { assets } from '../assets/assets'
 import NewsLetterBox from '../Components/NewsLetterBox'
 
