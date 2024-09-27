@@ -1,16 +1,16 @@
-import p_img1 from './p_img1.png'
-import p_img2_1 from './p_img2_1.png'
+import p_img1 from './display/body_wave_4_human_hair.jpg'
+import p_img2_1 from './display/bodywave_humanhair.jpg'
 import p_img2_2 from './p_img2_2.png'
 import p_img2_3 from './p_img2_3.png'
 import p_img2_4 from './p_img2_4.png'
-import p_img3 from './p_img3.png'
-import p_img4 from './p_img4.png'
-import p_img5 from './p_img5.png'
-import p_img6 from './p_img6.png'
-import p_img7 from './p_img7.png'
-import p_img8 from './p_img8.png'
-import p_img9 from './p_img9.png'
-import p_img10 from './p_img10.png'
+import p_img3 from './display/black_water_wave.jpg'
+import p_img4 from './display/black_body_wave_humanhair.jpg'
+import p_img5 from './display/pixie_wig.jpg'
+import p_img6 from './display/full_lace_wig_8_inch.jpg'
+import p_img7 from './display/full_lace_indian_22_inch.jpg'
+import p_img8 from './display/full_lace_indian_22_inch_remy.jpg'
+import p_img9 from './display/water_wave_16_inch.jpg'
+import p_img10 from './display/body_wave_22_inch.jpg'
 import p_img11 from './p_img11.png'
 import p_img12 from './p_img12.png'
 import p_img13 from './p_img13.png'
@@ -98,12 +98,12 @@ export const assets = {
 export const products = [
     {
         _id: "aaaaa",
-        name: "Women Round Neck Cotton Top",
-        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+        name: "Ready To Go Wig - Glueless Body Wave 6x6 Transparent Lace Closure Wigs",
+        description: "Asteria Hair Glueless Closure Wigs,100% Human Hair Body Wave Hair 6x6 Closure Wigs Pre-plucked Closure help you get a natural look.",
         price: 100,
         image: [p_img1],
-        category: "Women",
-        subCategory: "Topwear",
+        category: "Lace Front Wigs",
+        subCategory: "TopwearWigs",
         sizes: ["S", "M", "L"],
         date: 1716634345448,
         bestseller: true
