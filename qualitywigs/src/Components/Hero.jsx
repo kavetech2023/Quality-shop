@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import your images here
-import img1 from '../assets/salon.jpg'
-import img2 from '../assets/1.jpg'
-import img3 from '../assets/salon.jpg'
+import img1 from '../assets/banner/banner_1_pic.jpeg'
+import img2 from '../assets/banner/banner_2.webp'
+import img3 from '../assets/banner/banner_3.webp'
 
 const images = [img1, img2, img3]
 
@@ -48,7 +48,7 @@ const Hero = () => {
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
         <motion.h1
           className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white"
           initial={{ y: -50, opacity: 0 }}
