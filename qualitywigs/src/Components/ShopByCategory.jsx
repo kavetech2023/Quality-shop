@@ -22,59 +22,7 @@ const categories = [
   { name: 'Frontals', image: oliveoil, icon: Sun },
 ]
 
-const FlyingHeart = () => {
-  const colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#8B00FF']
-  return (
-    <motion.svg
-      width="50"
-      height="50"
-      viewBox="0 0 50 50"
-      initial={{ x: -50, y: Math.random() * window.innerHeight }}
-      animate={{
-        x: window.innerWidth + 50,
-        y: [Math.random() * window.innerHeight, Math.random() * window.innerHeight],
-      }}
-      transition={{
-        duration: 10,
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "loop",
-      }}
-      className="absolute z-10"
-    >
-      {colors.map((color, index) => (
-        <motion.path
-          key={index}
-          d="M25 39.7l-.6-.5C11.5 28.7 8 25 8 19c0-5 4-9 9-9 4.1 0 6.4 2.3 8 4.1 1.6-1.8 3.9-4.1 8-4.1 5 0 9 4 9 9 0 6-3.5 9.7-16.4 20.2l-.6.5z"
-          fill={color}
-          opacity={0.2}
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            delay: index * 1.1,
-            repeat: Infinity,
-          }}
-        />
-      ))}
-      <motion.path
-        d="M25 39.7l-.6-.5C11.5 28.7 8 25 8 19c0-5 4-9 9-9 4.1 0 6.4 2.3 8 4.1 1.6-1.8 3.9-4.1 8-4.1 5 0 9 4 9 9 0 6-3.5 9.7-16.4 20.2l-.6.5z"
-        fill="#FF0000"
-        animate={{
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 4.8,
-          ease: "easeInOut",
-          repeat: Infinity,
-        }}
-      />
-    </motion.svg>
-  )
-}
+
 
 export default function ShopByCategory() {
   const [width, setWidth] = useState(0)
@@ -109,7 +57,7 @@ export default function ShopByCategory() {
 
   return (
     <section className="my-16 container mx-auto px-4 relative overflow-hidden">
-      <FlyingHeart />
+      
       <div className='text-3xl mx-auto text-center mb-4'>
         <Title text1="IN" text2="OUR SHOP" />
       </div>
@@ -135,7 +83,7 @@ export default function ShopByCategory() {
                     />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-white text-xl font-semibold bg-black bg-opacity-50 px-4 py-2 rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                    <h3 className="text-white text-xl font-semibold  px-4 py-2 rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                       {category.name}
                     </h3>
                   </div>
