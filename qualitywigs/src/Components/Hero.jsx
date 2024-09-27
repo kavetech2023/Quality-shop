@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import straight from '../assets/4/straight-blunt-cut-double-drawn-glueless.jpg'
+import curly from '../assets/4/lace-closure-wig.jpg'
+import wavy from '../assets/4/layer-body-wave-bob-wig.jpg'
+import kinky from '../assets/4/4c-edges-hairline-kinky-straight-bob-wig.jpg'
 
 // Import your images here
 import img1 from '../assets/banner/banner_1_pic.jpeg'
@@ -10,10 +14,10 @@ import img3 from '../assets/banner/banner_3.webp'
 const images = [img1, img2, img3]
 
 const categories = [
-  { name: 'Straight', image: '/placeholder.svg?height=100&width=100&text=Straight' },
-  { name: 'Curly', image: '/placeholder.svg?height=100&width=100&text=Curly' },
-  { name: 'Wavy', image: '/placeholder.svg?height=100&width=100&text=Wavy' },
-  { name: 'Kinky', image: '/placeholder.svg?height=100&width=100&text=Kinky' },
+  { name: 'Straight', image: straight },
+  { name: 'Curly', image: curly },
+  { name: 'Wavy', image: wavy },
+  { name: 'Kinky', image: kinky },
 ]
 
 const Hero = () => {

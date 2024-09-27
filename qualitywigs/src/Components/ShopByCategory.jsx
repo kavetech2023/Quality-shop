@@ -30,19 +30,6 @@ export default function ShopByCategory() {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
   }, [])
 
-  const moveLeft = () => {
-    controls.start({
-      x: controls.get("x") + 300,
-      transition: { duration: 0.5, ease: "easeInOut" }
-    })
-  }
-
-  const moveRight = () => {
-    controls.start({
-      x: controls.get("x") - 300,
-      transition: { duration: 0.5, ease: "easeInOut" }
-    })
-  }
 
   return (
     <section className="my-16 container mx-auto px-4">
@@ -68,8 +55,8 @@ export default function ShopByCategory() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-white text-xl font-semibold  px-4 py-2 rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 flex  items-center justify-center">
+                    <h3 className="text-white text-xl bg-black font-semibold  px-4 py-2 rounded-full transition-opacity duration-300  group-hover:opacity-100">
                       {category.name}
                     </h3>
                   </div>
@@ -79,18 +66,6 @@ export default function ShopByCategory() {
           </motion.div>
         </motion.div>
 
-        <button
-          onClick={moveLeft}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          onClick={moveRight}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none"
-        >
-          <ChevronRight size={24} />
-        </button>
       </div>
     </section>
   )

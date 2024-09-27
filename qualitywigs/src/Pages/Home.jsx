@@ -9,8 +9,10 @@ import ShopByCategory from '../Components/ShopByCategory'
 
 const Home = () => {
   return (
+    <>
+    <Hero />
     <div>
-        <Hero />
+        
         <ShopByCategory />
         <LatestCollection />
         <ShopByLook />  
@@ -18,6 +20,7 @@ const Home = () => {
         <OurPolicy />
         <NewsLetterBox />
     </div>
+    </>
   )
 }
 
