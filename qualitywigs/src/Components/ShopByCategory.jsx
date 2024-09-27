@@ -9,7 +9,7 @@ import headband from '../assets/bycategory/headband_category.jpg'
 import wigglue from '../assets/bycategory/wig_glue.jpg'
 import laceclosure from '../assets/bycategory/lace_frontal_closure.jpg'
 import oliveoil from '../assets/bycategory/olive_oil.jpg'
-import Title from './Title'
+import Title from './TitleMe'
 
 const categories = [
   { name: 'Wigs', image: wigs, icon: Crown },

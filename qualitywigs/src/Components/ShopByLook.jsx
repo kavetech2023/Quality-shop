@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import Title from './Title'
+import Title from './TitleMe'
 import wedding from '../assets/bylook/wedding.jpg'
 import vacation from '../assets/bylook/vacation.webp'
 import date from '../assets/bylook/date.jpg'
