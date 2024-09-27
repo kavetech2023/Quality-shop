@@ -52,31 +52,7 @@ const Hero = () => {
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
-        <motion.h1
-          className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          Discover Your Perfect Style
-        </motion.h1>
-        <motion.p
-          className="text-lg md:text-xl lg:text-2xl mb-8 text-center text-white"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          Premium Quality Hair Extensions and Wigs
-        </motion.p>
-        <motion.button
-          className="bg-white text-black font-bold py-2 px-6 rounded-full hover:bg-gray-200 transition duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Shop Now
-        </motion.button>
-      </div>
+
 
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition duration-300"
