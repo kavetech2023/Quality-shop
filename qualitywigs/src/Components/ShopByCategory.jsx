@@ -33,7 +33,7 @@ export default function ShopByCategory() {
 
   return (
     <section className="my-16 container mx-auto px-4">
-      <div className='flex items-center justify-center text-3xl'>
+      <div className='flex items-center justify-center text-center text-3xl'>
         <Title text1="SHOP" text2="BY CATEGORY" />
         </div>
       <div className="relative">

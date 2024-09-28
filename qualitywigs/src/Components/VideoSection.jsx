@@ -51,7 +51,7 @@ export default function VideoSection() {
   return (
     <section className="py-16 bg-gradient-to-r from-pink-100 to-purple-100">
       <div className="container mx-auto px-4 ">
-        <div className='flex items-center justify-center text-3xl'>
+        <div className='flex items-center justify-center text-center text-3xl'>
         <Title text1="TRENDING" text2="VIDEOS" />
         </div>
         
