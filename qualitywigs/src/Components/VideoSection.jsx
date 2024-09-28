@@ -30,7 +30,7 @@ const videos = [
     id: '4',
     title: 'Product Showcase',
     source: 'local',
-    url: '/videos/product-showcase.mp4',
+    url: 'https://www.instagram.com/reel/DATJ60NsGDi/?utm_source=ig_web_button_share_sheet',
     thumbnail: '/placeholder.svg?height=200&width=350&text=Product+Showcase'
   }
 ]
@@ -50,8 +50,11 @@ export default function VideoSection() {
 
   return (
     <section className="py-16 bg-gradient-to-r from-pink-100 to-purple-100">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
+        <div className='flex items-center justify-center text-3xl'>
         <Title text1="TRENDING" text2="VIDEOS" />
+        </div>
+        
         <p className="text-center text-gray-600 mb-12">Discover the latest trends and tutorials from our experts and community</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

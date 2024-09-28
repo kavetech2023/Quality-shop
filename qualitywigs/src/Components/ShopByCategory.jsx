@@ -33,11 +33,13 @@ export default function ShopByCategory() {
 
   return (
     <section className="my-16 container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+      <div className='flex items-center justify-center text-3xl'>
+        <Title text1="SHOP" text2="BY CATEGORY" />
+        </div>
       <div className="relative">
         <motion.div ref={carousel} className="overflow-hidden">
           <motion.div 
-            className="flex"
+            className="flex p-4"
             animate={controls}
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
