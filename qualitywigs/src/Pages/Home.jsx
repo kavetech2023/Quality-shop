@@ -6,6 +6,7 @@ import OurPolicy from '../Components/OurPolicy'
 import NewsLetterBox from '../Components/NewsLetterBox'
 import ShopByLook from '../Components/ShopByLook'
 import ShopByCategory from '../Components/ShopByCategory'
+import VideoSection from '../Components/VideoSection'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <div>
         
         <ShopByCategory />
+        <VideoSection />
         <LatestCollection />
         <ShopByLook />  
         <BestSeller />
